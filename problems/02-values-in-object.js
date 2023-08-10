@@ -1,6 +1,6 @@
 /***********************************************************************
-Write a function called `valuesInObject(obj)` that takes in an object and returns 
-an array of all the values within that Object. 
+Write a function called `valuesInObject(obj)` that takes in an object and returns
+an array of all the values within that Object.
 
 
 Do this once using using a `for...in` loop and once using `Object.values`.
@@ -14,9 +14,11 @@ valuesInObject(animals); // => ["Wolfie", "Jet", "Bilbo"]
 valuesInObject(foods); // => ["tart", "sour", "sweet"]
 ***********************************************************************/
 
-function valuesInObject(obj) {
-  // Your code here
-}
+// function valuesInObject(obj) {
+//   // Your code here
+// }
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = valuesInObject;
