@@ -6,7 +6,27 @@ return an object that has key-value pairs listing each person who scored as a ke
 and the sum of the total points for the game as their value.
 
 
-Example 1:
+***********************************************************************/
+
+function countScores(people) {
+  let newobj={};
+  for (let objects of people){
+    let nameval=objects.name
+    let scoreval=objects.score
+    // console.log(nameval);
+    // console.log(scoreval);
+    // console.log(newobj);
+    if (nameval in newobj){
+      newobj[nameval] += scoreval
+    }
+    else {
+      newobj[nameval]=scoreval;
+    }
+  }
+  return newobj;
+}
+
+// Example 1:
 let ppl = [{name: "Anthony", score: 10},
             {name: "Fred", score : 10},
             {name: "Anthony", score: -8},
@@ -14,22 +34,16 @@ let ppl = [{name: "Anthony", score: 10},
 
 console.log(countScores(ppl)); //=> { Anthony: 2, Fred: 10, Winnie: 12 }
 
-Example 2:
-let peeps = [
-  {name: "Anthony", score: 2},
-  {name: "Winnie", score: 2},
-  {name: "Fred", score: 2},
-  {name: "Winnie", score: 2},
-  {name: "Fred", score: 2},
-  {name: "Anthony", score: 2},
-  {name: "Winnie", score: 2}
-];
-console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
-***********************************************************************/
-
-function countScores(people) {
-  // Your code here
-}
-
+// // Example 2:
+// let peeps = [
+//   {name: "Anthony", score: 2},
+//   {name: "Winnie", score: 2},
+//   {name: "Fred", score: 2},
+//   {name: "Winnie", score: 2},
+//   {name: "Fred", score: 2},
+//   {name: "Anthony", score: 2},
+//   {name: "Winnie", score: 2}
+// ];
+// console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = countScores;
