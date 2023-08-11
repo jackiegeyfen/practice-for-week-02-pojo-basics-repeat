@@ -11,11 +11,10 @@ doesKeyExist(obj1, 'name'); // => false
 ***********************************************************************/
 
 function doesKeyExist(obj, key) {
-  for (let i = 0 ; i < obj.length ; i++) {
-    let keys = obj(key)
-    console.log(keys)
-  // if (Object.keys(obj).includes(key)) { return "true"} else { return "false"}
-  }
+if (obj[key] !== undefined) {
+  return true;
+}
+return false;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
